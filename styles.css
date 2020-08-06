@@ -1,81 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-:root{
-    --success-color:#2ecc71;
-    --error-color:#e74c3c;
+body {
+  background-color: #242333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  font-family: "Open Sans", sans-serif;
+  color: aliceblue;
+  margin: 0;
+}
+.container{
+    perspective: 600px;
 }
 
-body{
-    background-color: #f9fafb;
-    font-family: 'Open Sans', sans-serif;
+.movie-container {
+  margin: 1em 0;
+}
+.showcase{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0em;
+    justify-content: space-between;
+    margin-right: 0.5em;
 }
-.container {
+
+.showcase li {
+    display: flex;
+    margin:0 0.6em;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 0.4em;
+  padding: 0.3em;
+  margin-left: 0.8em;
+  -webkit-appearance: none;
+}
+
+.seat{
+    background-color: #5F5F5F;
+    height: 1em;
+    width: 0.8em;
+    margin: 0.3em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+.row{
+    display: flex;
+}
+.seat.occupied{
+  background-color: rgb(231, 18, 14);
+}
+.seat.selected{
     background-color: #fff;
-    border-radius: 0.4em;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    width: 25em;
 }
-.form{
-    padding: 2em;
+.seat:nth-of-type(2){
+    margin-right: 1em;
 }
-h2{
-    text-align: center;
-    margin: 0 0 1em;
+.seat:nth-last-of-type(2){
+    margin-left: 1em;
 }
-.form-control{
-    margin: 1.3em 0;
-    position: relative;
+
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: aliceblue;
 }
-.form-control label{
-    color: #777;
-    display: block;
-    margin-bottom: 0.3m;
+.showcase .seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
 }
-.form-control input{
-    border: 0.2em solid #f0f0f0;
-    border-radius: 0.25em;
-    display: block;
+
+.showcase .seat.na:hover{
+    background-color:#5F5F5F ;
+}
+
+.screen{
+    background-color: #fff;
+    height: 3.5em;
     width: 100%;
-    padding: 0.9em;
-    font-size: 1em;
-    
-}
-.form-control input:focus{
-    outline: 0em;
-    border-color: #777;
-}
-.form-control.success input {
-    border-color:var(--success-color);
-}
-.form-control.error input {
-    border-color: var(--error-color);
-}
-.form-control small{
-    color: var(--error-color);
-    position: absolute;
-    left: 0em;
-    visibility: hidden; 
-}
-.form-control.error small {
-    visibility: visible;
-}
-.form button{
-    cursor:pointer;
-    background-color: #3498db;
-    border: 2px solid #3498db;
-    border-radius: 4px;
-    color: #fff;
-    display: block;
-    font-size: 1em;
-    padding: 0.8em;
-    margin-top: 1em;
-    width: 100%;
+    margin: 1em 0;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+    transform: rotateX(-45deg);
 }
