@@ -31,7 +31,7 @@ h2{
     margin: 0 0 1em;
 }
 .form-control{
-    margin: 1em 0;
+    margin: 1.3em 0;
     position: relative;
 }
 .form-control label{
@@ -63,6 +63,9 @@ h2{
     position: absolute;
     left: 0em;
     visibility: hidden; 
+}
+.form-control.error small {
+    visibility: visible;
 }
 .form button{
     cursor:pointer;
