@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #709c75;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+button {
+    padding: 1em
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input,button{
+    border: 1px solid #dedede;
+    border-top-left-radius: 0.2em;
+    border-bottom-left-radius: 0.2em;
+    border-right: none;
+    font-size: 0.9em;
+    padding: 0.5em;
+    margin: 0;
+}
+input[type="text"]{
+    width: 18em;
+}
+
+button:focus{
+    border: none;
+}
+.search {
+    border-left: 0;
+    border-radius: 0;
+
+    border-top-right-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+}
+.random{
+margin-left: 0.5em;
+border-radius: 0.2em;
+}
